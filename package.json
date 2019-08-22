@@ -1,0 +1,28 @@
+{
+  "name": "svg2flutter",
+  "version": "0.1.0",
+  "description": "Convert SVG icons to Flutter icons pack",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiagohm/svg2flutter.git"
+  },
+  "keywords": [
+    "svg",
+    "ttf",
+    "dart",
+    "flutter",
+    "icons"
+  ],
+  "author": "tiagohm <tiago.henrique.cco@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiagohm/svg2flutter/issues"
+  },
+  "homepage": "https://github.com/tiagohm/svg2flutter#readme",
+  "dependencies": {
+    "meow": "^5.0.0",
+    "webfont": "^9.0.0"
+  }
+}
