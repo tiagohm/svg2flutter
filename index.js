@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const webfont = require("webfont").default;
 const meow = require('meow');
 const fs = require("fs");
