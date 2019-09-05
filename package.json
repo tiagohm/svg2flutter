@@ -1,6 +1,6 @@
 {
   "name": "svg2flutter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert SVG icons to Flutter icons pack",
   "main": "index.js",
   "scripts": {},

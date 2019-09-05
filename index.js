@@ -17,7 +17,8 @@ const cli = meow(`
       --input, -i  Input directory contains all SVG icons (defaults to ".")
       --dart, -d Output directory contains generated Dart file (defaults to ".")
       --ttf, -t Output directory contains generated TTF file (defaults to ".")
-      --name, -n Generated name (defaults "to MyIcons") 
+      --name, -n Generated name (defaults "to MyIcons")
+      --height, -h Font height in pixels (defaults to 512)
 `, {
         flags: {
             input: {
@@ -39,6 +40,11 @@ const cli = meow(`
                 type: 'string',
                 alias: 'n',
                 default: 'MyIcons'
+            },
+            height: {
+            	type: 'integer',
+            	alias: 'h',
+            	default: 512
             }
         }
     });
@@ -61,7 +67,8 @@ const normalizedName = str => {
 async function generate() {
     const svg = await webfont({
         files: cli.flags.input,
-        fontName: cli.flags.name
+        fontName: cli.flags.name,
+        fontHeight: cli.flags.height
     });
 
     fs.writeFileSync(path.join(cli.flags.ttf, cli.flags.name + ".ttf"), svg.ttf);
